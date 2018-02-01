@@ -1,0 +1,42 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:6.12
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - run: env
+
+      # Install cvrg.sh
+      - run: curl -s -o $(pwd)/cvrg.sh https://gist.githubusercontent.com/tobilg/b0fae1eacb844bbbbe96c495347ab498/raw/a8493cece91d421b323c92251ec5fc812340dfdc/cvrg.sh && chmod +x $(pwd)/cvrg.sh
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: yarn test
+
+      # run and pus coverage!
+      - run: yarn coverage
+
+
