@@ -7,7 +7,7 @@
     "test": "nyc mocha --timeout=3000",
     "coverage": "nyc report --reporter=text-lcov | ./cvrg.sh"
   },
-  "keywords": [],
+  "keywords": ["ci", "coverage", "reporting"],
   "author": "tobilg@gmail.com",
   "dependencies": {},
   "devDependencies": {
