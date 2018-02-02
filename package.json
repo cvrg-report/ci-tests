@@ -18,5 +18,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cvrg-report/ci-tests.git"
+  },
+  "engines": {
+    "node" : ">=6.10 <=6.12"
   }
 }
