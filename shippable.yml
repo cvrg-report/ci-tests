@@ -14,9 +14,9 @@ build:
 
   pre_ci:
     - env
-    - curl -s -o $(pwd)/cvrg.sh https://gist.githubusercontent.com/tobilg/b0fae1eacb844bbbbe96c495347ab498/raw/a8493cece91d421b323c92251ec5fc812340dfdc/cvrg.sh && chmod +x $(pwd)/cvrg.sh
 
   ci:
+    - curl -s -o $(pwd)/cvrg.sh https://gist.githubusercontent.com/tobilg/b0fae1eacb844bbbbe96c495347ab498/raw/a8493cece91d421b323c92251ec5fc812340dfdc/cvrg.sh && chmod +x $(pwd)/cvrg.sh
     - shippable_retry npm install
     - npm run test
 
