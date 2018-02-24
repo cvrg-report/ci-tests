@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --timeout=3000",
-    "coverage": "nyc report --reporter=text-lcov | ./cvrg.sh"
+    "coverage": "bash -c 'nyc report --reporter=text-lcov | bash <(curl -s -o- -L https://raw.githubusercontent.com/cvrg-report/cvrg/master/cvrg) || exit 0'"
   },
-  "keywords": ["ci", "coverage", "reporting"],
+  "keywords": [
+    "ci",
+    "coverage",
+    "reporting"
+  ],
   "author": "tobilg@gmail.com",
   "dependencies": {},
   "devDependencies": {
@@ -20,6 +24,6 @@
     "url": "https://github.com/cvrg-report/ci-tests.git"
   },
   "engines": {
-    "node" : ">=6.10 <=6.12"
+    "node": ">=6.10 <=6.12"
   }
 }
