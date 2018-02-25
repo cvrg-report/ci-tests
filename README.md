@@ -3,10 +3,24 @@
 This project was created to evaluate if the shell script uploader for [cvrg.report](https://cvrg.report) work with the following CI systems:
 
 * [Travis CI](http://www.travis-ci.org)
-* [CircleCI](http://www.circleci.com)
+* [Circle CI](http://www.circleci.com)
 * [Codeship](http://www.codeship.com)
 * [GitLab CI](https://about.gitlab.com/gitlab-ci/)
 * [Shippable](http://www.shippable.com)
+* [Drone CI](https://drone.io/)
+* [Jenkins](https://jenkins.io/)
+* [Teamcity](https://www.jetbrains.com/teamcity/)
+* [Buddybuild](https://www.buddybuild.com/)
+* [Bamboo CI](https://www.atlassian.com/software/bamboo)
+* [Bitrise](https://www.bitrise.io/)
+* [Buildkite](https://buildkite.com/)
+* [Heroku CI](https://www.heroku.com/continuous-integration)
+* [Codefresh](https://codefresh.io/)
+* [Wercker](http://www.wercker.com/)
+* [Magnum CI](https://magnum-ci.com/)
+* [Greenhouse CI](https://nevercode.io/)
+* [AppVeyor](https://www.appveyor.com/)
+* [Semaphore CI](https://semaphoreci.com/)
 
 ## Help wanted
 
