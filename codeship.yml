@@ -1,8 +1,11 @@
 install:
   - env
   - npm install
+
 before_script:
   - curl -s -o $(pwd)/cvrg https://raw.githubusercontent.com/cvrg-report/cvrg/master/cvrg && chmod +x $(pwd)/cvrg
+
 script:
   - npm run test
-  - npm run coverage
+  - npm run coverage-from-stdin
+  - npm run coverage-from-reports

@@ -21,4 +21,5 @@ build:
     - npm run test
 
   post_ci:
-      - npm run coverage
+      - npm run coverage-from-stdin
+      - npm run coverage-from-reports

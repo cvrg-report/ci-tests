@@ -20,7 +20,7 @@ jobs:
 
       - run: env
 
-      # Install cvrg.sh
+      # Install cvrg
       - run: curl -s -o $(pwd)/cvrg https://raw.githubusercontent.com/cvrg-report/cvrg/master/cvrg && chmod +x $(pwd)/cvrg
 
       - save_cache:
@@ -31,7 +31,9 @@ jobs:
       # run tests!
       - run: yarn test
 
-      # run and pus coverage!
-      - run: yarn coverage
+      # run and push coverage from stdin!
+      - run: yarn coverage-from-stdin
 
+      # run and push coverage from reports!
+      - run: yarn coverage-from-reports
 

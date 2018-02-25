@@ -15,4 +15,5 @@ run_tests:
     - curl -s -o $(pwd)/cvrg https://raw.githubusercontent.com/cvrg-report/cvrg/master/cvrg && chmod +x $(pwd)/cvrg
     - npm install
     - npm run test
-    - npm run coverage
+    - npm run coverage-from-stdin
+    - npm run coverage-from-reports
