@@ -29,3 +29,4 @@ In the future, we're planning to integrate more CI systems. If you're running a 
 ## Suggesting new CI integrations
 
 We are very open to add support for other CI solutions than the already existing. If you want to suggest another CI system to be added, please open an [issue](https://github.com/cvrg-report/ci-tests/issues) with the label `ci-suggestion`. Thanks a lot in advance!
+
