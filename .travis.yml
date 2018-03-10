@@ -5,7 +5,7 @@ env:
 
 before_script:
   - env
-  - curl -s -o -L $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
+  - curl -s -L -o $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
 
 node_js:
   - '6'

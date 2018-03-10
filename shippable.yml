@@ -16,7 +16,7 @@ build:
     - env
 
   ci:
-    - curl -s -o -L $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
+    - curl -s -L -o $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
     - shippable_retry npm install
     - npm run test
 

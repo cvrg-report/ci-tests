@@ -12,7 +12,7 @@ run_tests:
   script:
     - env
     - export NODE_ENV=development
-    - curl -s -o -L $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
+    - curl -s -L -o $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
     - npm install
     - npm run test
     - npm run coverage-from-stdin
