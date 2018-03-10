@@ -3,7 +3,7 @@ install:
   - npm install
 
 before_script:
-  - curl -s -o $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
+  - curl -s -o -L $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
 
 script:
   - npm run test

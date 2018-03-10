@@ -21,7 +21,7 @@ jobs:
       - run: env
 
       # Install cvrg
-      - run: curl -s -o $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
+      - run: curl -s -o -L $(pwd)/cvrg https://cvrg.report/bash && chmod +x $(pwd)/cvrg
 
       - save_cache:
           paths:
